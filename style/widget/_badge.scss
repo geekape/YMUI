@@ -1,0 +1,19 @@
+.ymui-badge {
+	display: inline-block;
+	color: #fff;
+	padding: 2px 10px;
+	font-size: 12px;
+	background: #000;
+	
+	// 圆角
+	&_radius{border-radius: 10px;}
+}
+
+
+
+@each $color,
+$value in $theme-colors {
+    .ymui-badge_#{$color} {
+        background: $value
+    }
+}

@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.ymui-badge {
+  display: inline-block;
+  color: #fff;
+  padding: 2px 10px;
+  font-size: 12px;
+  background: #000; }
+  .ymui-badge_radius {
+    border-radius: 10px; }
+
+.ymui-badge_primary {
+  background: #007bff; }
+
+.ymui-badge_secondary {
+  background: #6c757d; }
+
+.ymui-badge_success {
+  background: #28a745; }
+
+.ymui-badge_info {
+  background: #17a2b8; }
+
+.ymui-badge_warning {
+  background: #ffc107; }
+
+.ymui-badge_danger {
+  background: #dc3545; }
+
+.ymui-badge_light {
+  background: #f8f9fa; }
+
+.ymui-badge_dark {
+  background: #343a40; }
+
+.page {
+  padding: 2em; }
+  .page-tt {
+    margin-bottom: 20px; }
+  .page-item {
+    margin-bottom: 20px; }
+    .page-item__tt {
+      margin-bottom: 5px; }
