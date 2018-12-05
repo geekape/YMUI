@@ -1,10 +1,28 @@
 .page {
 	padding: 2em;
-	&-tt {margin-bottom: 20px;}
+	&-tt {margin: 30px 0 15px;}
+	
 	&-item {
 		margin-bottom: 20px;
 		&__tt {
 			margin-bottom: 5px;
 		}
 	}
+	
+	&-block {
+		width: 400px;
+	}
+	
+}
+
+// 占位符
+.placeholder {
+	margin: 5px;
+	padding: 0 10px;
+	background-color: #ebebeb;
+	height: 2.3em;
+	line-height: 2.3em;
+	text-align: center;
+	color: #cfcfcf;
+	width: 100%;
 }

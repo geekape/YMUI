@@ -7,9 +7,18 @@
   color: #fff;
   padding: 2px 10px;
   font-size: 12px;
-  background: #000; }
+  background: #000;
+  line-height: 1.2;
+  text-align: center;
+  vertical-align: middle; }
   .ymui-badge_radius {
     border-radius: 10px; }
+  .ymui-badge_dot {
+    border-radius: 10px;
+    padding: .12em .4em;
+    background: #F43530;
+    min-width: 8px;
+    min-height: 14px; }
 
 .ymui-badge_primary {
   background: #007bff; }
@@ -35,11 +44,28 @@
 .ymui-badge_dark {
   background: #343a40; }
 
+.ymui-flex {
+  display: flex; }
+  .ymui-flex__item {
+    flex: 1; }
+
 .page {
   padding: 2em; }
   .page-tt {
-    margin-bottom: 20px; }
+    margin: 30px 0 15px; }
   .page-item {
     margin-bottom: 20px; }
     .page-item__tt {
       margin-bottom: 5px; }
+  .page-block {
+    width: 400px; }
+
+.placeholder {
+  margin: 5px;
+  padding: 0 10px;
+  background-color: #ebebeb;
+  height: 2.3em;
+  line-height: 2.3em;
+  text-align: center;
+  color: #cfcfcf;
+  width: 100%; }
