@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0; }
 
+a {
+  text-decoration: none; }
+
 .ymui-badge {
   display: inline-block;
   color: #fff;
@@ -49,8 +52,31 @@
   .ymui-flex__item {
     flex: 1; }
 
+.ymui-footer {
+  font-size: 14px;
+  color: #808080;
+  text-align: center; }
+  .ymui-footer__text {
+    padding: 0 .34em;
+    font-size: 12px; }
+  .ymui-footer__links {
+    font-size: 0; }
+  .ymui-footer__link {
+    position: relative;
+    margin: 0 .62em;
+    display: inline-block;
+    visibility: top;
+    font-size: 14px;
+    color: #17a2b8; }
+  .ymui-footer_fixed-bottom {
+    position: fixed;
+    bottom: 1em;
+    left: 0;
+    right: 0; }
+
 .page {
-  padding: 2em; }
+  margin: 0 auto;
+  min-width: 320px; }
   .page-tt {
     margin: 30px 0 15px; }
   .page-item {
