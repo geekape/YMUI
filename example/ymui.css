@@ -74,8 +74,76 @@ a {
     left: 0;
     right: 0; }
 
+.ymui-grids {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  position: relative; }
+  .ymui-grids:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #C7C7C7;
+    color: #C7C7C7;
+    transform-origin: 0 0;
+    transform: scaleY(0.5); }
+  .ymui-grids:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-left: 1px solid #C7C7C7;
+    color: #C7C7C7;
+    transform-origin: 0 0;
+    transform: scaleX(0.5); }
+
+.ymui-grid {
+  padding: 20px 10px;
+  width: 33.3%;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative; }
+  .ymui-grid:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #C7C7C7;
+    color: #C7C7C7;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5); }
+  .ymui-grid:after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-right: 1px solid #C7C7C7;
+    color: #C7C7C7;
+    transform-origin: 100% 0;
+    transform: scaleX(0.5); }
+  .ymui-grid__icon {
+    width: 28px;
+    height: 28px;
+    margin: 0 auto; }
+  .ymui-grid__text {
+    margin-top: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #000; }
+
 .page {
-  margin: 0 auto;
+  margin: 1em;
   min-width: 320px; }
   .page-tt {
     margin: 30px 0 15px; }
