@@ -1,0 +1,41 @@
+.ymui-button {
+	position: relative;
+	display: block;
+	padding-left: 14px;
+	padding-right: 14px;
+	font-size: 18px;
+	background: #ddd;
+	color: #fff;
+	line-height: 2.5;
+	width: 100%;
+	border-radius: 5px;
+	text-decoration: none;
+	text-align: center;
+	border: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	overflow: hidden;
+	
+	&_plain {
+		background: transparent;
+		color: $gray-800;
+		border: 1px solid #eee;
+	}
+}
+
+@each $color,
+$value in $theme-colors {
+    .ymui-button_#{$color} {
+        background: $value;
+				&:active {
+					
+				}
+    }
+		.ymui-button_plain-#{$color} {
+				background: transparent;
+				border: 1px solid $value;
+				color: $value;
+				&:active {
+					
+				}
+		}
+}

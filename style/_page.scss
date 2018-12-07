@@ -9,11 +9,6 @@
 			margin-bottom: 5px;
 		}
 	}
-	
-	&-block {
-		width: 400px;
-	}
-	
 }
 
 // 占位符
@@ -26,4 +21,17 @@
 	text-align: center;
 	color: #cfcfcf;
 	width: 100%;
+}
+
+//
+// button
+//
+
+.page.button {
+	.ymui-button {margin-bottom: 10px;}
+	.button-sp-area {
+		margin: 0 auto;
+    padding: 15px 0;
+    width: 60%;
+	}
 }

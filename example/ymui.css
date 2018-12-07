@@ -108,6 +108,8 @@ a {
   text-align: center;
   box-sizing: border-box;
   position: relative; }
+  .ymui-grid:active {
+    background: #e9ecef; }
   .ymui-grid:before {
     content: " ";
     position: absolute;
@@ -142,6 +144,91 @@ a {
     overflow: hidden;
     color: #000; }
 
+.ymui-button {
+  position: relative;
+  display: block;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  background: #ddd;
+  color: #fff;
+  line-height: 2.5;
+  width: 100%;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  border: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: hidden; }
+  .ymui-button_plain {
+    background: transparent;
+    color: #343a40;
+    border: 1px solid #eee; }
+
+.ymui-button_primary {
+  background: #007bff; }
+
+.ymui-button_plain-primary {
+  background: transparent;
+  border: 1px solid #007bff;
+  color: #007bff; }
+
+.ymui-button_secondary {
+  background: #6c757d; }
+
+.ymui-button_plain-secondary {
+  background: transparent;
+  border: 1px solid #6c757d;
+  color: #6c757d; }
+
+.ymui-button_success {
+  background: #28a745; }
+
+.ymui-button_plain-success {
+  background: transparent;
+  border: 1px solid #28a745;
+  color: #28a745; }
+
+.ymui-button_info {
+  background: #17a2b8; }
+
+.ymui-button_plain-info {
+  background: transparent;
+  border: 1px solid #17a2b8;
+  color: #17a2b8; }
+
+.ymui-button_warning {
+  background: #ffc107; }
+
+.ymui-button_plain-warning {
+  background: transparent;
+  border: 1px solid #ffc107;
+  color: #ffc107; }
+
+.ymui-button_danger {
+  background: #dc3545; }
+
+.ymui-button_plain-danger {
+  background: transparent;
+  border: 1px solid #dc3545;
+  color: #dc3545; }
+
+.ymui-button_light {
+  background: #f8f9fa; }
+
+.ymui-button_plain-light {
+  background: transparent;
+  border: 1px solid #f8f9fa;
+  color: #f8f9fa; }
+
+.ymui-button_dark {
+  background: #343a40; }
+
+.ymui-button_plain-dark {
+  background: transparent;
+  border: 1px solid #343a40;
+  color: #343a40; }
+
 .page {
   margin: 1em;
   min-width: 320px; }
@@ -151,8 +238,6 @@ a {
     margin-bottom: 20px; }
     .page-item__tt {
       margin-bottom: 5px; }
-  .page-block {
-    width: 400px; }
 
 .placeholder {
   margin: 5px;
@@ -163,3 +248,11 @@ a {
   text-align: center;
   color: #cfcfcf;
   width: 100%; }
+
+.page.button .ymui-button {
+  margin-bottom: 10px; }
+
+.page.button .button-sp-area {
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 60%; }
