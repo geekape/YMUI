@@ -1,0 +1,57 @@
+.ymui-cell_select {
+    padding: 0;
+    .ymui-cell__bd:after {
+        content: " ";
+        @include setArrow(right, 6px, #C8C8CD, 2px);
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        margin-top: -4px;
+    }
+    &-after {
+        padding-left: 15px;
+    }
+}
+
+.ymui-cell_select-before {
+    .ymui-select {
+        width: 105px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .ymui-cell__hd {
+        position: relative;
+        &:after {
+            content: " ";
+            @include setArrow(right, 6px, #C8C8CD, 2px);
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            margin-top: -4px;
+        }
+        &:before {
+            content: " ";
+            @include setRightLine;
+        }
+    }
+    .ymui-cell__bd {
+        padding-left: 15px;
+        &:after {
+            border: 0
+        }
+    }
+}
+
+.ymui-select {
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: 100%;
+    font-size: inherit;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    z-index: 1;
+    padding-left: 15px;
+}

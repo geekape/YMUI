@@ -1,0 +1,71 @@
+// 标题
+.ymui-cells__title {
+    color: $cell-gray;
+    font-size: 14px;
+    margin-top: .77em;
+    margin-bottom: .33em;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.ymui-cells {
+    background: #fff;
+    font-size: 17px;
+    overflow: hidden;
+    line-height: 1.4;
+    position: relative;
+    &:before {
+        @include setTopLine(#e5e5e5);
+    }
+    ;
+    &:after {
+        @include setBottomLine(#e5e5e5);
+    }
+}
+
+// 列表项
+.ymui-cell {
+    position: relative;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    &:before {
+        @include setTopLine(#e5e5e5);
+        left: 15px;
+    }
+    &:first-child:before {
+        border: 0;
+    }
+    // 图标
+    &__hd {
+        img {
+            width: 20px;
+            margin-right: 5px;
+            display: block;
+        }
+    }
+    // 标题
+    &__bd {
+        flex: 1
+    }
+    // 说明
+    &__ft {
+        color: $cell-gray
+    }
+}
+
+// 可跳转
+.ymui-cell_access {
+    .ymui-cell__ft {
+        position: relative;
+        padding-right: 13px;
+        &:after {
+            content: " ";
+            @include setArrow(right, 6px, #C8C8CD, 2px);
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+            right: 2px;
+        }
+    }
+}

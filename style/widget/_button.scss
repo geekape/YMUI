@@ -1,73 +1,73 @@
 .ymui-btn {
-	position: relative;
-	display: block;
-	padding-left: 14px;
-	padding-right: 14px;
-	font-size: 18px;
-	background: #ddd;
-	color: #fff;
-	line-height: 2.5;
-	border-radius: 5px;
-	text-decoration: none;
-	text-align: center;
-	border: 0;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	overflow: hidden;
-	&_plain {
-		background: transparent;
-		color: $gray-800;
-		border: 1px solid #eee;
-	}
+    position: relative;
+    display: block;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 18px;
+    background: #ddd;
+    color: #fff;
+    line-height: 2.5;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    &_plain {
+        background: transparent;
+        color: $gray-800;
+        border: 1px solid #eee;
+    }
 }
 
 @each $color,
 $value in $theme-colors {
-		// 实心 Button
+    // 实心 Button
     .ymui-btn_#{$color} {
         background: $value;
-				width: 100%;
-				// Loading button
-				&:active,
-				&.ymui-btn_loading {
-					background: darken($value, 8%);
-					color: rgba(255, 255, 255, 0.6);
-				}
-				
+        width: 100%;
+        // Loading button
+        &:active,
+        &.ymui-btn_loading {
+            background: darken($value, 8%);
+            color: rgba(255, 255, 255, 0.6);
+        }
     }
-		
-		// 边框 Button
-		.ymui-btn_plain-#{$color} {
-				background: transparent;
-				border: 1px solid $value;
-				color: $value;
-				width: 100%;
-				&:active {
-					border-color: rbga(0,0,0,.2);
-					color: rbga(0,0,0,.2);
-				}
-		}
-		
-		// 小 Button
-		.ymui-btn_mini {
-			width: auto;
-			display: inline-block;
-			padding: 0 1.32em;
-			line-height: 2.3;
-			font-size: 13px;
-		}
-		
+    // 边框 Button
+    .ymui-btn_plain-#{$color} {
+        background: transparent;
+        border: 1px solid $value;
+        color: $value;
+        width: 100%;
+        &:active {
+            border-color: rbga(0, 0, 0, .2);
+            color: rbga(0, 0, 0, .2);
+        }
+    }
+    // 小 Button
+    .ymui-btn_mini {
+        width: auto;
+        display: inline-block;
+        padding: 0 1.32em;
+        line-height: 2.3;
+        font-size: 13px;
+    }
 }
 
 // 实心Button禁用状态
 .ymui-btn_disabled {
-	opacity: .5;
-	color: rgba(255,255,255,.6);
-	cursor: no-drop;
+    opacity: .5;
+    color: rgba(255, 255, 255, .6);
+    cursor: no-drop;
 }
 
 .ymui-btn_plain-disabled {
-	border-color: rgba(0,0,0,.2);
-	color: rgba(0,0,0,.2);
-	cursor: no-drop;
+    border-color: rgba(0, 0, 0, .2);
+    color: rgba(0, 0, 0, .2);
+    cursor: no-drop;
 }
 
+// 按钮区域
+.ymui-btn-area {
+    margin: 1.17647059em 15px 0.3em;
+}

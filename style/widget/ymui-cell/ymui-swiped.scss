@@ -1,0 +1,31 @@
+// 可滑动
+.ymui-cell_swiped {
+    padding: 0;
+    display: block;
+    &>.ymui-cell__bd {
+        position: relative;
+        transform: translateX(-68px);
+    }
+    &>.ymui-cell__ft {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        color: #fff;
+    }
+}
+
+// swiped
+.ymui-swiped-btn {
+    display: block;
+    padding: 10px 1em;
+    line-height: 1.4;
+    color: inherit;
+    // warn
+    &_warn {
+        background: $red;
+    }
+    &_info {
+        background: $blue;
+    }
+}

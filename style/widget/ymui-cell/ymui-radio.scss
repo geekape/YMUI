@@ -1,0 +1,9 @@
+// 单选
+.ymui-cells_radio {
+    .ymui-check:checked+.ymui-icon-checked:before {
+        display: block;
+        content: '\EA08';
+        color: $primary;
+        font-size: 16px;
+    }
+}

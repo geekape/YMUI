@@ -1,0 +1,13 @@
+// 复选框
+.ymui-cells_checkbox {
+    .ymui-icon-checked:before {
+        content: '\EA01';
+        color: #C9C9C9;
+        font-size: 23px;
+        display: block;
+    }
+    .ymui-check:checked+.ymui-icon-checked:before {
+        content: '\EA06';
+        color: $primary;
+    }
+}
