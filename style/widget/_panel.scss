@@ -1,0 +1,111 @@
+.ymui-panel {
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    .ymui-cell:first-child:before {
+        border: 1px solid #e5e5e5;
+    }
+    .ymui-cells:before {
+        border: 0
+    }
+    &:before {
+        @include setTopLine(#e5e5e5);
+    }
+    &:after {
+        @include setBottomLine(#e5e5e5);
+    }
+    &__hd {
+        padding: 14px 15px 10px;
+        color: #808080;
+        font-size: 13px;
+        position: relative;
+        &:before {
+            @include setBottomLine(#e5e5e5);
+            left: 15px;
+        }
+    }
+}
+
+.ymui-media-box_appmsg {
+    display: flex;
+    align-items: center;
+}
+
+.ymui-media-box {
+    padding: 15px;
+    position: relative;
+    &:before {
+        @include setTopLine(#e5e5e5);
+        left: 15px;
+    }
+    // 图片
+    &__hd {
+        margin-right: .8em;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        background: #ececec;
+    }
+    &__img {
+        width: 100%;
+        max-height: 100%;
+        vertical-align: top;
+    }
+    &__bd {
+        flex: 1
+    }
+    // 标题
+    &__title {
+        font-weight: 400;
+        font-size: 17px;
+        width: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    // 描述
+    &__desc {
+        color: #808080;
+        font-size: 13px;
+        line-height: 1.2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+    &__info {
+        margin-top: 15px;
+        padding-bottom: 5px;
+        font-size: 13px;
+        color: #CECECE;
+        line-height: 1em;
+        list-style: none;
+        overflow: hidden;
+    }
+    &__meta {
+        float: left;
+        padding-right: 1em;
+        &_extra {
+            padding-left: 1em;
+            border-left: 1px solid #ececec;
+        }
+    }
+}
+
+// 文字列表组合
+.ymui-media-box_text {
+    .ymui-media-box__title {
+        margin-bottom: 8px;
+    }
+}
+
+a.ymui-media-box {
+    color: #000000;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
