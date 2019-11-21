@@ -1,0 +1,114 @@
+/* list
+----------------------------------------------------------------*/
+.ym-list {
+  position: relative;
+  z-index: 1;
+  font-size: $list-font-size;
+  margin-bottom: 20px;
+
+  &::before {
+    @include setLine(top);
+  }
+  &::after {
+    @include setLine(bottom);
+  }
+}
+
+
+
+/* list-item
+----------------------------------------------------------------*/
+.ym-list__item {
+  background-color: $list-bg-color;
+  position: relative;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+
+  &-hd {
+    @extend %g-flex-center;
+    margin-right: 30px;
+  }
+
+  &-content {
+    flex: 1;
+    padding-left: 0;
+    display: flex;
+    padding: 30px;
+    padding-left: 0;
+  }
+
+  &-ft {
+    display: flex;
+    align-items: center;
+    min-width: 80px;
+  }
+
+  &-bd {
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &-subtitle {
+    font-size: 13PX;
+    color: #999;
+    @include text-overflow(2);
+  }
+
+  &-badge,
+  &-after {
+    font-size: 14PX;
+    color: rgba(0,0,0,.45);
+    margin-right: 40px;
+  }
+
+  &-badge {
+    border-radius: 50%;
+    color: #fff;
+    background: red;
+    width: 40px;
+    height: 40px;
+    @extend %g-flex-center;
+    font-size: 11PX;
+  }
+  &:active {
+    background-color: #ECECEC;
+  }
+  &::before {
+    @include setLine(bottom);
+  }
+
+  /* link */
+  &--link{
+    &::before { height: 0; }
+  }
+  &--link &-ft {
+    position: relative;
+    &::after {
+      display: inline-block;
+      content: " ";
+      height: 9PX;
+      width: 9PX;
+      border-width: 2PX 2PX 0 0;
+      border-color: #c7c7cc;
+      border-style: solid;
+      transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+      position: absolute;
+      top: calc(50% - 4PX);
+      right: 3PX;
+      margin-top: 0PX;
+    }
+  }
+  &--link &-content{
+    position: relative;
+    
+    &::before {
+      @include setLine(bottom);
+    }
+  }
+
+
+}

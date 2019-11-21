@@ -1,0 +1,48 @@
+
+/* 1px
+----------------------------------------------------------------*/
+@mixin setLine($dir) {
+  content: '';
+  position: absolute;
+  background-color: $color-border;
+  display: block;
+  z-index: 10;
+  height: 1PX;
+  width: 100%;
+  transform-origin: 50% 0;
+  transform: scaleY(.5);
+
+  @if $dir == 'top' {
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: auto;
+  }
+
+  @if $dir == 'bottom' {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: auto;
+  }
+}
+
+/* 溢出隐藏
+----------------------------------------------------------------*/
+@mixin text-overflow($num: 1) {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:$num;
+  -webkit-box-orient:vertical;
+}
+
+
+/* 占位符
+----------------------------------------------------------------*/
+%g-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
