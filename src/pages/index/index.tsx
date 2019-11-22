@@ -1,21 +1,21 @@
 import Taro, { useState, useEffect } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
+import { YmList, YmListItem, YmAccordion } from '../../components'
 import './index.scss'
 
 export default function Index() {
 
-  useEffect(()=> {
-    let num = 1
-    setInterval(()=> {
-      document.title = '首页' + num
-      num++
-    }, 1000)
-  }, [])
-
   console.log(this)
   return (
     <View className="index">
-      <Text>Hello world1!</Text>
+      <YmList>
+        <YmListItem accordionItem title="基础组件">
+          <YmAccordion open={false}>
+            <YmListItem title="List" link="../list/index" />
+            <YmListItem title="Accordion" link="../accordion/index" />
+          </YmAccordion>
+        </YmListItem>
+      </YmList>
     </View>
   )
 }

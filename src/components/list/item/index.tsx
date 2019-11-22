@@ -1,27 +1,61 @@
-import Taro from '@tarojs/taro'
+import Taro, { useState, useEffect } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import classNames from 'classnames'
 import { IProps } from '../../../../@types/listItem'
 
 export default function YmListItem(props: IProps) {
+  const [open, setOpen] = useState(false)
+
+  const handleClick = () => {
+    if (props.accordionItem) {
+      setOpen(!open)
+      return false
+    }
+    if (props.link) {
+      Taro.navigateTo({ url: props.link })
+    } else {
+      props.onClick()
+    }
+  }
+
   return (
-    <View className={classNames(
-      'ym-list__item',
-      {
-        'ym-list__item--link': props.link,
-      }
-    )}>
-      {props.renderMedia && <View className="ym-list__item-hd">{props.renderMedia}</View>}
-      <View className="ym-list__item-content">
-        <View className="ym-list__item-bd">
-          <View className="ym-list__item-title">{props.title}</View>
-          <View className="ym-list__item-subtitle">{props.subtitle}</View>
-        </View>
-        <View className="ym-list__item-ft">
-          {props.badge!=0 && <View className="ym-list__item-badge">{props.badge}</View>}
-          {props.after && <View className="ym-list__item-after">{props.after}</View>}
+    <View>
+      <View
+        className={classNames('ym-list__item', {
+          'ym-list__item--link': props.link,
+          'ym-list__item--group-title': props.groupTitle,
+          'ym-list__item--accordion': props.accordionItem,
+          'ym-list__item--accordion-open': open
+        })}
+        onClick={handleClick}
+      >
+        {props.renderMedia && (
+          <View className="ym-list__item-hd">{props.renderMedia}</View>
+        )}
+        <View className="ym-list__item-content">
+          <View className="ym-list__item-bd">
+            <View className="ym-list__item-title">{props.title}</View>
+            <View className="ym-list__item-subtitle">{props.subtitle}</View>
+          </View>
+          <View className="ym-list__item-ft">
+            {props.badge != 0 && (
+              <View className="ym-list__item-badge">{props.badge}</View>
+            )}
+            {props.after && (
+              <View className="ym-list__item-after">{props.after}</View>
+            )}
+            <View
+              className={classNames('iconfont', {
+                'icon-right': props.link,
+                'icon-unfold': props.accordionItem && !open,
+                'icon-fold': props.accordionItem && open
+              })}
+            ></View>
+          </View>
         </View>
       </View>
+
+      {props.children}
     </View>
   )
 }
@@ -37,4 +71,8 @@ YmListItem.defaultProps = {
   badge: 0,
   link: '',
   renderMedia: '',
-} as IProps;
+  groupTitle: false,
+  onClick: () => {},
+  accordionItem: false,
+  children: ''
+} as IProps

@@ -21,7 +21,8 @@ class App extends Component {
   config: Config = {
     pages: [
       'pages/index/index',
-      'pages/list/index'
+      'pages/list/index',
+      'pages/accordion/index',
     ],
     window: {
       backgroundTextStyle: 'light',

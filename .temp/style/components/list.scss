@@ -28,6 +28,8 @@
   align-items: center;
   padding-left: 30px;
 
+  
+
   &-hd {
     @extend %g-flex-center;
     margin-right: 30px;
@@ -45,6 +47,9 @@
     display: flex;
     align-items: center;
     min-width: 80px;
+    display: flex;
+    justify-content: flex-end;
+    color: #999;
   }
 
   &-bd {
@@ -62,7 +67,7 @@
   &-after {
     font-size: 14PX;
     color: rgba(0,0,0,.45);
-    margin-right: 40px;
+    margin-right: 10px;
   }
 
   &-badge {
@@ -87,20 +92,6 @@
   }
   &--link &-ft {
     position: relative;
-    &::after {
-      display: inline-block;
-      content: " ";
-      height: 9PX;
-      width: 9PX;
-      border-width: 2PX 2PX 0 0;
-      border-color: #c7c7cc;
-      border-style: solid;
-      transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-      position: absolute;
-      top: calc(50% - 4PX);
-      right: 3PX;
-      margin-top: 0PX;
-    }
   }
   &--link &-content{
     position: relative;
@@ -110,5 +101,19 @@
     }
   }
 
+  /* accordion */
+  &--accordion-open+.ym-accordion {
+    height: auto;
+    opacity: 1;
+  }
 
+}
+
+.ym-list__item.ym-list__item--group-title {
+  background-color: #f7f7f7;
+  font-weight: 500;
+  font-size: 18PX;
+  z-index: 20;
+  position: sticky;
+  top: 0;
 }

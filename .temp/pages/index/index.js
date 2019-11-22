@@ -1,6 +1,7 @@
-import Nerv from "nervjs";
 import Taro from "@tarojs/taro-h5";
-import { View, Text } from '@tarojs/components';
+import Nerv from "nervjs";
+import { View } from '@tarojs/components';
+import { YmList, YmListItem, YmAccordion } from "../../components/index";
 import './index.scss';
 export default class Index extends Taro.Component {
   config = {
@@ -8,16 +9,16 @@ export default class Index extends Taro.Component {
   };
 
   render() {
-    Taro.useEffect(() => {
-      let num = 1;
-      setInterval(() => {
-        document.title = '首页' + num;
-        num++;
-      }, 1000);
-    }, []);
     console.log(this);
     return <View className="index">
-      <Text>Hello world1!</Text>
+      <YmList>
+        <YmListItem accordionItem title="基础组件">
+          <YmAccordion open={false}>
+            <YmListItem title="List" link="../list/index" />
+            <YmListItem title="Accordion" link="../accordion/index" />
+          </YmAccordion>
+        </YmListItem>
+      </YmList>
     </View>;
   }
 

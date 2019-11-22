@@ -54,10 +54,14 @@ class App extends Component {
       path: '/pages/list/index',
       componentLoader: () => import( /* webpackChunkName: "list_index" */'./pages/list/index'),
       isIndex: false
+    }, {
+      path: '/pages/accordion/index',
+      componentLoader: () => import( /* webpackChunkName: "accordion_index" */'./pages/accordion/index'),
+      isIndex: false
     }]} customRoutes={{}} />;
   }
   config = {
-    pages: ["/pages/index/index", "/pages/list/index"],
+    pages: ["/pages/index/index", "/pages/list/index", "/pages/accordion/index"],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',

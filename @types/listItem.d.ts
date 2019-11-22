@@ -13,6 +13,10 @@ export interface IProps {
   link: string,
   // jsx，头部内容，可放icon或图片
   renderMedia: string,
+  groupTitle: boolean, //styicky
+  onClick: Function,
+  accordionItem: boolean,
+  children: string
 }
 
 declare const ListItem: ComponentClass<IProps>

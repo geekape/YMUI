@@ -9,7 +9,17 @@ page,body {
 .page-title {
   font-size: 18PX;
   padding: 30px;
-  color: #4CAF50;
+  font-weight: 500;
 }
 
 
+/* common
+----------------------------------------------------------------*/
+.block {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  color: #999;
+  padding: 30px;
+  font-size: 14PX;
+}
