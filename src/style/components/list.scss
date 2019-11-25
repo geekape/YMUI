@@ -6,11 +6,17 @@
   font-size: $list-font-size;
   margin-bottom: 20px;
 
-  &::before {
-    @include setLine(top);
-  }
-  &::after {
-    @include setLine(bottom);
+  &--border {
+    &::before {
+      @include setLine(top);
+    }
+    &::after {
+      @include setLine(bottom);
+    }
+
+    .ym-list__item::before {
+      @include setLine(bottom);
+    }
   }
 }
 
@@ -82,9 +88,7 @@
   &:active {
     background-color: #ECECEC;
   }
-  &::before {
-    @include setLine(bottom);
-  }
+  
 
   /* link */
   &--link{
@@ -99,12 +103,6 @@
     &::before {
       @include setLine(bottom);
     }
-  }
-
-  /* accordion */
-  &--accordion-open+.ym-accordion {
-    height: auto;
-    opacity: 1;
   }
 
 }

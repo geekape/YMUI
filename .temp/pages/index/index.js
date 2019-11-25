@@ -12,12 +12,17 @@ export default class Index extends Taro.Component {
     console.log(this);
     return <View className="index">
       <YmList>
-        <YmListItem accordionItem title="基础组件">
-          <YmAccordion open={false}>
-            <YmListItem title="List" link="../list/index" />
-            <YmListItem title="Accordion" link="../accordion/index" />
-          </YmAccordion>
-        </YmListItem>
+        <YmAccordion title="基础组件">
+          <YmListItem title="List" link="../list/index" />
+          <YmListItem title="Accordion" link="../accordion/index" />
+          <YmListItem title="Button" link="../button/index" />
+        </YmAccordion>
+      </YmList>
+
+      <YmList>
+        <YmAccordion title="反馈组件">
+          <YmListItem title="Notify" link="../notify/index" />
+        </YmAccordion>
       </YmList>
     </View>;
   }

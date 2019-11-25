@@ -1,6 +1,10 @@
 import { ComponentClass } from "react"
 
 export interface IProps {
+  children: any,
+  calssName?: String,
+  style?: String | Object,
+
   // 标题
   title: string,
   // 二级标题
@@ -16,7 +20,6 @@ export interface IProps {
   groupTitle: boolean, //styicky
   onClick: Function,
   accordionItem: boolean,
-  children: string
 }
 
 declare const ListItem: ComponentClass<IProps>

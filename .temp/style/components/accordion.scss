@@ -3,8 +3,16 @@
 .ym-accordion {
   position: relative;
   transition-duration: .3s;
-  height: 0;
   background: $color-white;
   overflow: hidden;
+  &__content {
+    height: 0;
+    opacity: 0;
+  }
+  
+  &--open &__content{
+    height: auto;
+    opacity: 1;
+  }
 }
 

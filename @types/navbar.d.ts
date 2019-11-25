@@ -1,8 +1,9 @@
 import { ComponentClass } from "react"
 
 export interface IProps {
-  children: any,
-  open?: false
+  // 导航标题
+  logo: string,
+  title: string,
 }
 
 declare const Accordion: ComponentClass<IProps>

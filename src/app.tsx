@@ -23,6 +23,7 @@ class App extends Component {
       'pages/index/index',
       'pages/list/index',
       'pages/accordion/index',
+      'pages/button/index',
     ],
     window: {
       backgroundTextStyle: 'light',

@@ -13,20 +13,11 @@ export default class ListPage extends Taro.Component {
     return <View className="page">
       <YmList>
         <YmListItem groupTitle title="普通列表" />
-        <YmListItem accordionItem title="123">
-          <YmAccordion>
-            <View className="block">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
-            </View>
-          </YmAccordion>
-        </YmListItem>
-        <YmListItem accordionItem title="123">
-          <YmAccordion>
-            <View className="block">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
-            </View>
-          </YmAccordion>
-        </YmListItem>
+        <YmAccordion title="123">
+          <View className="block">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
+          </View>
+        </YmAccordion>
       </YmList>
     </View>;
   }

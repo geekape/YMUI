@@ -1,9 +1,38 @@
 /* color
 ----------------------------------------------------------------*/
-$color-white: #fff;
-$color-black: #000;
-$color-border: #c7c7c7;
+$color-green: #4cd964 !default;
+$color-blue: #2196f3 !default;
+$color-red: #ff3b30 !default;
+$color-pink: #ff2d55 !default;
+$color-orange: #ff9500 !default;
+$color-yellow: #ffcc00 !default;
+$color-purple: #9c27b0 !default;
+$color-deeppurple: #673ab7 !default;
+$color-lightblue: #5ac8fa !default;
+$color-white: #fff !default;
+$color-black: #000 !default;
+$color-border: #c7c7c7 !default;
 
+
+
+$color-primary: $color-green !default;
+$color-info: $color-blue !default;
+$color-warning: $color-red !default;
+$color-danger: $color-orange !default;
+
+
+$color-black-0: #000 !default!default;
+$color-black-1: #333 !default!default;
+$color-black-2: #7f7f7f !default!default;
+$color-black-3: #b2b2b2 !default!default;
+
+$color-grey-0: #333 !default!default;
+$color-grey-1: #666 !default!default;
+$color-grey-2: #999 !default!default;
+$color-grey-3: #ccc !default!default;
+$color-grey-4: #e5e5e5 !default!default;
+$color-grey-5: #f0f0f0 !default!default;
+$color-grey-6: #f7f7f7 !default!default;
 
 /* list
 ----------------------------------------------------------------*/
